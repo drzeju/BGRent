@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DdlMappings">
+    <mapping uuid="fdae556a-6f74-4160-8630-d6766fce76ab" name="game_db Mapping">
+      <data-sources db="1dad2bf0-6989-4060-b524-021416d54907" ddl="3fd8207c-1db8-40c6-b8c2-c13b56ea275c" />
+    </mapping>
+    <mapping uuid="0eb276b2-3835-444f-8a9f-ddccc48c9776" name="@localhost Mapping">
+      <data-sources db="cf44d9f5-994e-4222-9bef-f6b616d31205" ddl="c0527452-96b7-4eca-aff2-c3f43dbf2700" />
+    </mapping>
+  </component>
+  <component name="SqlDataSourceStorage">
+    <option name="dataSources">
+      <list>
+        <State>
+          <option name="id" value="c0527452-96b7-4eca-aff2-c3f43dbf2700" />
+          <option name="name" value="@localhost (DDL)" />
+          <option name="languageId" value="MySQL" />
+          <option name="urls">
+            <array>
+              <option value="file://$PROJECT_DIR$/BGRent" />
+            </array>
+          </option>
+        </State>
+      </list>
+    </option>
+  </component>
+</project>
