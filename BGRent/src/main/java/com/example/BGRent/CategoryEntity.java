@@ -1,6 +1,7 @@
 package com.example.BGRent;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "category")
@@ -12,6 +13,9 @@ public class CategoryEntity
 
     @Column(name = "categoryName", nullable = false)
     private String categoryName;
+
+    @OneToMany(mappedBy="category")
+    private Set<GameEntity> games;
 
     public CategoryEntity() { }
 

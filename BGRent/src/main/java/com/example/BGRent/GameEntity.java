@@ -13,12 +13,11 @@ public class GameEntity
     @Column(name = "gameName", nullable = false)
     private String gameName;
 
-    @Column(name="category", nullable = false)
+
     @ManyToOne
-    @JoinColumns({
-            @JoinColumn(name = "categoryId", referencedColumnName = "categoryId"),
-//            @JoinColumn(name = "categotyName", referencedColumnName = "categoryName")
-    })
+    @JoinColumn(name="categoryId", nullable=false)
+
+
     private CategoryEntity category;
 
     @Column(name = "gameDescription")

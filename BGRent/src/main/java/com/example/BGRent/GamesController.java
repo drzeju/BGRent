@@ -38,11 +38,11 @@ public class GamesController
         return ResponseEntity.of(this.gamesRepository.findById(gameId));
     }
 
-    // POST http://localhost:8080/api/game/create
-    // echo '{"gameName":"Azul","category":"Abstract","gameDescription":"-","gamePrice":"20"}' | curl -X POST -H "Content-Type: application/json" -d @- http://localhost:8080/api/game/create
+    // POST http://localhost:8080/api/games/create
+    // echo '{"gameName":"Azul","category":"1","gameDescription":"-","gamePrice":"20"}' | curl -X POST -H "Content-Type: application/json" -d @- http://localhost:8080/api/game/create
     //
     @PostMapping(
-            value = "/api/game/create",
+            value = "/api/games/create",
             consumes = MediaType.APPLICATION_JSON_VALUE,
             produces = MediaType.APPLICATION_JSON_VALUE
     )
