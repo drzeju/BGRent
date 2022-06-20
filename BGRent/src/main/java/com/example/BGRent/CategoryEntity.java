@@ -1,6 +1,9 @@
 package com.example.BGRent;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -14,8 +17,10 @@ public class CategoryEntity
     @Column(name = "categoryName", nullable = false)
     private String categoryName;
 
-    @OneToMany(mappedBy="category")
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy="category")
+//    private List<GameEntity> games = new ArrayList<>();
     private Set<GameEntity> games;
+//            = new HashSet<GameEntity>();
 
     public CategoryEntity() { }
 
@@ -39,5 +44,14 @@ public class CategoryEntity
     public void setCategoryName(String categoryName) {
         this.categoryName = categoryName;
     }
+
+    // <------------------------------------------------------------------------------------------
+//    public List<GameEntity> getGames(){
+//        return games;
+//    }
+//
+//    public void setGames(List<GameEntity> games){
+//        this.games = games;
+//    }
 
 }

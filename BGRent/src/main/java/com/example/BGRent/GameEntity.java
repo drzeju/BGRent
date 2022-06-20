@@ -1,6 +1,7 @@
 package com.example.BGRent;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "games")
@@ -14,11 +15,10 @@ public class GameEntity
     private String gameName;
 
 
-    @ManyToOne
-    @JoinColumn(name="categoryId", nullable=false)
-
-
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="categoryId", referencedColumnName = "categoryId", nullable=false)
     private CategoryEntity category;
+
 
     @Column(name = "gameDescription")
     private String gameDescription;
@@ -54,9 +54,15 @@ public class GameEntity
 
     //////////////////////////////////////////////////////
 
-    public CategoryEntity getCategory() {
-        return this.category;
-    }
+    public CategoryEntity getCategory() { return this.category; }
+
+    public void setCategory(CategoryEntity category) { this.category = category; }
+
+    //    <--------------------------------------------
+//    public long getCategoryId(){
+//        return category != null ? category.getCategoryId() : null;
+//    }
+    //    <--------------------------------------------
     //////////////////////////////////////////////////////
 
     public String getDescription() {

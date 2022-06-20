@@ -1,6 +1,8 @@
 package com.example.BGRent;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -49,6 +51,7 @@ public class CategoryController
     @Transactional
     public ResponseEntity<CategoryEntity> createCategory(@RequestBody CategoryEntity categoryEntity) {
         return ResponseEntity.ok(this.categoryRepository.save(categoryEntity));
+
     }
 
     // POST http://localhost:8080/api/categories/1/update

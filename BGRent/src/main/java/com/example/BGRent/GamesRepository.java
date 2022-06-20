@@ -14,6 +14,8 @@ public interface GamesRepository extends JpaRepository<GameEntity, Long>
 
     List<GameEntity> findAll();
     Optional<GameEntity> findById(Long gameId);
+//    GameEntity findByCategoryId(long categoryId);
+
 
     // See also:
     //
